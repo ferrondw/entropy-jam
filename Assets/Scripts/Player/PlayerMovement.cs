@@ -2,11 +2,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using DG.Tweening;
-using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static bool canShoot = true;
+    public static bool hasBashed = true;
+ 
     [SerializeField] private Camera camera;
+    [SerializeField] private Transform cursor;
     [SerializeField] private Rigidbody2D rigidbody;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int numberOfPoints;
@@ -14,12 +17,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forceMultiplier;
     [SerializeField] private float velocityThreshold;
     [SerializeField] private TMP_Text shotsText;
+    [SerializeField] private Gradient stressColor;
+
     [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
 
     private Vector2 launchVelocity;
     private bool isTouchingGround;
-    private bool canShoot = true;
     private bool inWater;
     private int shots;
 
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         lineRenderer.positionCount = numberOfPoints;
         Cursor.visible = false;
+        canShoot = true;
         shots = 0;
     }
 
@@ -59,6 +64,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void DrawArc(Vector2 initialVelocity)
     {
+        Vector3 diff = transform.position - cursor.position;
+        var amount = Mathf.Clamp(Mathf.Clamp(diff.magnitude, 0, 20) / 30 - 0.2f, 0, 5);
+        lineRenderer.startColor = stressColor.Evaluate(amount * 7);
+        var col = stressColor.Evaluate(amount * 7);
+        lineRenderer.endColor = new Color(col.r, col.g, col.b, 0);
+        
         lineRenderer.enabled = true;
         Vector2 currentPosition = transform.position;
         Vector2 currentVelocity = initialVelocity;

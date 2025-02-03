@@ -13,7 +13,7 @@ public class CursorFollow : MonoBehaviour
     [SerializeField] private Sprite dragSprite;
     [SerializeField] private float smoothTime;
     [SerializeField] private Gradient stressColor;
-
+    
     private Vector3 velocity = Vector3.zero;
     private Vector3 rotationVelocity = Vector3.zero;
 
@@ -26,7 +26,7 @@ public class CursorFollow : MonoBehaviour
     {
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && (PlayerMovement.canShoot))
         {
             spriteRenderer.sprite = dragSprite;
             Vector3 diff = worldPosition - dragTarget.position;
@@ -34,7 +34,7 @@ public class CursorFollow : MonoBehaviour
             diff.Normalize();
             float rotZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
             transform.rotation = SmoothDampQuaternion(transform.rotation, Quaternion.Euler(0f, 0f, rotZ - 270), ref rotationVelocity, smoothTime);
-            
+
             // shake
             var amount = Mathf.Clamp(Mathf.Clamp(absoluteDiff.magnitude, 0, 20) / 30 - 0.2f, 0, 5);
             var offsetX = Random.Range(-amount, amount);
@@ -42,9 +42,10 @@ public class CursorFollow : MonoBehaviour
             spriteRenderer.transform.localPosition = new Vector3(offsetX, offsetY, 0);
             spriteRenderer.color = stressColor.Evaluate(amount * 7);
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && (PlayerMovement.canShoot))
         {
             spriteRenderer.transform.localPosition = Vector3.zero;
+            transform.position = dragTarget.position;
             spriteRenderer.sprite = defaultSprite;
             spriteRenderer.color = Color.white;
         }
