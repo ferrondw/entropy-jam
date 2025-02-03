@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
@@ -21,7 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
-
+    
+    [SerializeField] private Collider2D ballCollider; // Used to ignore the spikeball collider and the balls collider
+    private Rigidbody2D ballBody;
+    
     private Vector2 launchVelocity;
     private bool isTouchingGround;
     private bool inWater;
@@ -33,15 +37,24 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         canShoot = true;
         shots = 0;
+
+        var myCollider = gameObject.GetComponent<Collider2D>();
+        ballBody = ballCollider.GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreCollision(ballCollider, myCollider, true);
     }
 
     private void Update()
     {
+        ballCollider.transform.position = transform.position;
+        ballBody.freezeRotation = false;
+        
         float targetSize = 7 + rigidbody.velocity.magnitude * 0.2f;
         camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetSize, Time.deltaTime * 2);
 
         canShoot = isTouchingGround && rigidbody.velocity.magnitude < velocityThreshold;
 
+        if (canShoot) ballBody.freezeRotation = true;
+        
         if (canShoot && Input.GetMouseButton(0))
         {
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
