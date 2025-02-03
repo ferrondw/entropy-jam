@@ -1,0 +1,77 @@
+{:blocks (
+{:block/created-at 1738578462664
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:isSizeLocked false
+:stroke ""
+:rotation 0
+:borderRadius 0
+:index 0
+:scale [1 1]
+:scaleLevel "md"
+:fill ""
+:type "text"
+:size [888 40]
+:fontFamily "var(--ls-font-family)"
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "5e1fb210-e219-11ef-844d-6f08c600c6cd"
+:padding 4
+:fontWeight 400
+:noFill true
+:point [216 424]
+:lineHeight 1.2
+:fontSize 20
+:parentId "67a099ba-7d78-4fd0-b8f0-6d20ec9990ff"
+:nonce 1738578405552
+:italic false
+:text "Fodian type game/ monkey ball but with random seeds you can play in ( randomized towers )"}}
+:block/updated-at 1738578462664} 
+{:block/created-at 1738578940714
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:isSizeLocked true
+:stroke ""
+:borderRadius 0
+:index 1
+:scale [1 1]
+:scaleLevel "md"
+:fill ""
+:type "text"
+:size [693 106]
+:fontFamily "var(--ls-font-family)"
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "7fd55850-e21a-11ef-844d-6f08c600c6cd"
+:padding 4
+:fontWeight 400
+:noFill true
+:point [216 528]
+:lineHeight 1.2
+:fontSize 20
+:parentId "67a099ba-7d78-4fd0-b8f0-6d20ec9990ff"
+:nonce 1738578891481
+:italic false
+:text "Enemies:\n\n- Can be hit by hamster ball to destroy\n- Fire projectiles that launch you back ( can even be used in advantage )"}}
+:block/updated-at 1738578940714})
+:pages (
+{:block/uuid #uuid "67a099ba-7d78-4fd0-b8f0-6d20ec9990ff"
+:block/properties 
+{:ls-type :whiteboard-page
+:logseq.tldraw.page 
+{:id "67a099ba-7d78-4fd0-b8f0-6d20ec9990ff"
+:name "gameplay"
+:bindings 
+{}
+:nonce 1
+:assets []
+:shapes-index ("5e1fb210-e219-11ef-844d-6f08c600c6cd" "7fd55850-e21a-11ef-844d-6f08c600c6cd")}}
+:block/updated-at 1738578940714
+:block/created-at 1738578362507
+:block/type "whiteboard"
+:block/name "gameplay"
+:block/original-name "Gameplay"})}

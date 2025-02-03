@@ -1,0 +1,393 @@
+{:blocks (
+{:block/created-at 1738578115357
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 0
+:scale [1 1]
+:type "image"
+:assetId "aeb5feb0-e218-11ef-844d-6f08c600c6cd"
+:size [647.7192982456139 355.00000000000006]
+:opacity 1
+:id "aeb69af0-e218-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [56 80]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578111114
+:clipping 0}}
+:block/updated-at 1738578115357} 
+{:block/created-at 1738578148394
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 1
+:scale [1 1]
+:type "image"
+:assetId "c30bfd10-e218-11ef-844d-6f08c600c6cd"
+:size [857 1165.5]
+:opacity 1
+:id "c30cc060-e218-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [-312 608]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578145208
+:clipping 0}}
+:block/updated-at 1738578148394} 
+{:block/created-at 1738578211644
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 2
+:scale [1 1]
+:type "image"
+:assetId "e8258440-e218-11ef-844d-6f08c600c6cd"
+:size [1647.058634628961 862.1500025402631]
+:opacity 1
+:id "e8264790-e218-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [448 776]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578207435
+:clipping 0}}
+:block/updated-at 1738578211644} 
+{:block/created-at 1738578232082
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 3
+:scale [1 1]
+:type "image"
+:assetId "f44a3090-e218-11ef-844d-6f08c600c6cd"
+:size [980.2489457907839 653.6269337753388]
+:opacity 1
+:id "f44af3e0-e218-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [264 1576]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578227832
+:clipping 0}}
+:block/updated-at 1738578232082} 
+{:block/created-at 1738578295892
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 4
+:scale [1 1]
+:type "html"
+:size [600.015618649342 617.000217609263]
+:id "15b75190-e219-11ef-844d-6f08c600c6cd"
+:isLocked false
+:point [-920 1528]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578283878
+:html "<img style=\"width: 883.491px; height: 617px; display: block;\" alt=\"A Guide to Dante's 9 Circles of Hell\" class=\"detail__media__img-highres  js-detail-img  js-detail-img-high\" src=\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thoughtco.com%2Fthmb%2FV4Yg94cQqaCdEzkL5BYM0dLBM5c%3D%2F5079x3547%2Ffilters%3Afill(auto%2C1)%2Fillustration-to-the-divine-comedy-by-dante-alighieri--abyss-of-hell---1480-1490--found-in-the-collection-of-the-biblioteca-apostolica-vaticana--486777773-5c3a03c246e0fb00016261f2.jpg&amp;f=1&amp;nofb=1&amp;ipt=39c11b84da700a560d8ee58784460ca4136e7d2ab68fe55bab0855be2dd57ac7&amp;ipo=images\">"}}
+:block/updated-at 1738578295892} 
+{:block/created-at 1738578307459
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:rotation 0
+:index 5
+:scale [1 1]
+:type "html"
+:size [416 512]
+:id "1e2844b0-e219-11ef-844d-6f08c600c6cd"
+:isLocked false
+:point [-472 1880]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578298822
+:html "<img style=\"width: 408.923px; height: 617px; display: block;\" alt=\"Dante's 'Inferno' is a journey to hell and back\" class=\"detail__media__img-highres  js-detail-img  js-detail-img-high\" src=\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.natgeofe.com%2Fn%2F45fe9417-0a51-404d-8bd7-1cb9d95263f9%2FDante11.jpg&amp;f=1&amp;nofb=1&amp;ipt=ad8ee32aa0799534ffa9097509fd90b2946a966c65ea9a33e142ef014c58a57b&amp;ipo=images\">"}}
+:block/updated-at 1738578307459} 
+{:block/created-at 1738578543171
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 6
+:scale [1 1]
+:type "image"
+:assetId "af03db20-e219-11ef-844d-6f08c600c6cd"
+:size [1920 1080]
+:opacity 1
+:id "af047760-e219-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [192 2112]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578541080
+:clipping 0}}
+:block/updated-at 1738578543171} 
+{:block/created-at 1738578570622
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 7
+:scale [1 1]
+:type "image"
+:assetId "be547300-e219-11ef-844d-6f08c600c6cd"
+:size [1167.352437513959 1508.944117702522]
+:opacity 1
+:id "be555d60-e219-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [-1080 3864]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578566772
+:clipping 0}}
+:block/updated-at 1738578570622} 
+{:block/created-at 1738578604757
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 8
+:scale [1 1]
+:type "image"
+:assetId "d3ffef40-e219-11ef-844d-6f08c600c6cd"
+:size [1458 1800]
+:opacity 1
+:id "d4014ed0-e219-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [-56 4120]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578603127
+:clipping 0}}
+:block/updated-at 1738578604757} 
+{:block/created-at 1738578748587
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 9
+:scale [1 1]
+:type "image"
+:assetId "27ef0e60-e21a-11ef-844d-6f08c600c6cd"
+:size [983.3547716145895 983.3547716145895]
+:opacity 1
+:id "27eff8c0-e21a-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [-1032 5192]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578744012
+:clipping 0}}
+:block/updated-at 1738578748587} 
+{:block/created-at 1738578780100
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:rotation 0
+:index 10
+:scale [1 1]
+:type "html"
+:size [1016 1048]
+:id "3a3df220-e21a-11ef-844d-6f08c600c6cd"
+:isLocked false
+:point [-208 5904]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578774908
+:html "<img style=\"width: 772.457px; height: 617px; display: block;\" alt=\"Gamer--freakz: Greatest boss fights: Lucifer (Shin megami tensei:Devil ...\" class=\"detail__media__img-highres  js-detail-img  js-detail-img-high\" src=\"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-3AGl0fKr750%2FTqal1Sl2g3I%2FAAAAAAAAEfI%2FjZHmcaVR6L8%2Fs1600%2FLucifer.jpg&amp;f=1&amp;nofb=1&amp;ipt=b8b21094b2166660c22d1082030b24439bc4b9e79c95e6b11e661726dd725dbc&amp;ipo=images\">"}}
+:block/updated-at 1738578780100} 
+{:block/created-at 1738578794727
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 11
+:scale [1 1]
+:type "image"
+:assetId "438c4cf0-e21a-11ef-844d-6f08c600c6cd"
+:size [1374.682588717434 1091.1543047944633]
+:opacity 1
+:id "438ce930-e21a-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [1272 5200]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578790335
+:clipping 0}}
+:block/updated-at 1738578794727} 
+{:block/created-at 1738578829871
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 12
+:scale [1 1]
+:type "image"
+:assetId "58e0cf90-e21a-11ef-844d-6f08c600c6cd"
+:size [820.4077626131634 1286.3993717774401]
+:opacity 1
+:id "58e1b9f0-e21a-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [1432 3872]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578826124
+:clipping 0}}
+:block/updated-at 1738578829871} 
+{:block/created-at 1738578862601
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 13
+:scale [1 1]
+:type "image"
+:assetId "6ba75450-e21a-11ef-844d-6f08c600c6cd"
+:size [2037.5712304811677 2898.077242478685]
+:opacity 1
+:id "6ba8b3e0-e21a-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [2680 3529.4758617254115]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578857642
+:clipping 0}}
+:block/updated-at 1738578862601} 
+{:block/created-at 1738579040748
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:isSizeLocked true
+:stroke ""
+:borderRadius 0
+:index 14
+:scale [1 1]
+:scaleLevel "xl"
+:fill ""
+:type "text"
+:size [2040 183]
+:fontFamily "var(--ls-font-family)"
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "b6f5bdc0-e21a-11ef-844d-6f08c600c6cd"
+:padding 4
+:fontWeight 400
+:noFill true
+:point [-2024 256]
+:lineHeight 1.2
+:fontSize 48
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738578984216
+:italic false
+:text "Player is a hamster in a spiky hamster ball- trying to climb the tower of babylon to heaven\n\nEnemies are angels, trying yo stop you."}}
+:block/updated-at 1738579040748} 
+{:block/created-at 1738579073440
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 15
+:scale [1 1]
+:type "image"
+:assetId "ea3ce0a0-e21a-11ef-844d-6f08c600c6cd"
+:size [1196.52847074466 897.3963530584949]
+:opacity 1
+:id "ea3da3f0-e21a-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [-3728 1208]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738579069953
+:clipping 0}}
+:block/updated-at 1738579073440} 
+{:block/created-at 1738579096863
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:index 16
+:scale [1 1]
+:type "image"
+:assetId "f8746760-e21a-11ef-844d-6f08c600c6cd"
+:size [1131.9894935925104 868.736122989601]
+:opacity 1
+:id "f8752ab0-e21a-11ef-844d-6f08c600c6cd"
+:isAspectRatioLocked true
+:isLocked false
+:objectFit "fill"
+:point [-2680 1920]
+:parentId "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:nonce 1738579093773
+:clipping 0}}
+:block/updated-at 1738579096863})
+:pages (
+{:block/uuid #uuid "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:block/properties 
+{:ls-type :whiteboard-page
+:logseq.tldraw.page 
+{:id "67a09845-ec04-4db7-a15b-d91c4e88835b"
+:name "art stuff"
+:bindings 
+{}
+:nonce 1
+:assets [
+{:id "aeb5feb0-e218-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/large-594149421_1738578110998_0.jpg"
+:size [832 456]} 
+{:id "c30bfd10-e218-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/Tartarus-4205852925_1738578145112_0.jpg"
+:size [1714 2331]} 
+{:id "e8258440-e218-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/7991feb84eac00901c076c353c254310-210747795_1738578207319_0.jpg"
+:size [1450 759]} 
+{:id "f44a3090-e218-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/babel-tower-stockpack-adobe-stock-scaled-1459358674_1738578227691_0.jpg"
+:size [2560 1707]} 
+{:id "af03db20-e219-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/Persona_3_Reload_20240214162423-3706528151_1738578541002_0.jpg"
+:size [3840 2160]} 
+{:id "be547300-e219-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/biblically_accurate_angel_by_dracuria_dfqm7kp-pre-1660615506_1738578566661_0.jpg"
+:size [786 1016]} 
+{:id "d3ffef40-e219-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/wp10739228-1499261245_1738578603050_0.jpg"
+:size [2916 3600]} 
+{:id "27ef0e60-e21a-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/Lahmu-2409600113_1738578743836_0.jpg"
+:size [896 896]} 
+{:id "438c4cf0-e21a-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/sat-1347922522_1738578790201_0.jpg"
+:size [1280 1016]} 
+{:id "58e0cf90-e21a-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/e04b61a26fb052897dfdb07c148febf2-4062345722_1738578825946_0.png"
+:size [500 784]} 
+{:id "6ba75450-e21a-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/O9oGVEl-2541584591_1738578857451_0.jpg"
+:size [914 1300]} 
+{:id "ea3ce0a0-e21a-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/820574-938869_20070904_001-1925337451_1738579069859_0.jpg"
+:size [640 480]} 
+{:id "f8746760-e21a-11ef-844d-6f08c600c6cd"
+:type "image"
+:src "../assets/Kirby's+dream+Course-2789939636_1738579093673_0.png"
+:size [903 693]}]
+:shapes-index ("aeb69af0-e218-11ef-844d-6f08c600c6cd" "c30cc060-e218-11ef-844d-6f08c600c6cd" "e8264790-e218-11ef-844d-6f08c600c6cd" "f44af3e0-e218-11ef-844d-6f08c600c6cd" "15b75190-e219-11ef-844d-6f08c600c6cd" "1e2844b0-e219-11ef-844d-6f08c600c6cd" "af047760-e219-11ef-844d-6f08c600c6cd" "be555d60-e219-11ef-844d-6f08c600c6cd" "d4014ed0-e219-11ef-844d-6f08c600c6cd" "27eff8c0-e21a-11ef-844d-6f08c600c6cd" "3a3df220-e21a-11ef-844d-6f08c600c6cd" "438ce930-e21a-11ef-844d-6f08c600c6cd" "58e1b9f0-e21a-11ef-844d-6f08c600c6cd" "6ba8b3e0-e21a-11ef-844d-6f08c600c6cd" "b6f5bdc0-e21a-11ef-844d-6f08c600c6cd" "ea3da3f0-e21a-11ef-844d-6f08c600c6cd" "f8752ab0-e21a-11ef-844d-6f08c600c6cd")}}
+:block/updated-at 1738579096863
+:block/created-at 1738577989663
+:block/type "whiteboard"
+:block/name "art stuff"
+:block/original-name "Art stuff"})}
