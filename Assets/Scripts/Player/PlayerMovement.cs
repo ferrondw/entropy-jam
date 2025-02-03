@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -19,12 +20,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float velocityThreshold;
     [SerializeField] private TMP_Text shotsText;
     [SerializeField] private Gradient stressColor;
+    [SerializeField] private Rigidbody2D ballBody;
 
     [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
-    
-    [SerializeField] private Collider2D ballCollider;
-    private Rigidbody2D ballBody;
     
     private Vector2 launchVelocity;
     private bool isTouchingGround;
@@ -37,15 +36,16 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         canShoot = true;
         shots = 0;
+    }
 
-        var thisCollider = gameObject.GetComponent<Collider2D>();
-        ballBody = ballCollider.GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreCollision(ballCollider, thisCollider, true);
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        Cursor.visible = hasFocus;
     }
 
     private void Update()
     {
-        ballCollider.transform.position = transform.position;
+        ballBody.transform.position = transform.position;
         ballBody.rotation += -rigidbody.velocity.x * Time.deltaTime * 50f;
         
         float targetSize = 7 + rigidbody.velocity.magnitude * 0.2f;

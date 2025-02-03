@@ -41,6 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Opacity: 0.25
     - _Speed: 0.01
     - _Texture_size: 6
     m_Colors:
