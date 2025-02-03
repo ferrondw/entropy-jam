@@ -1388,9 +1388,9 @@ GameObject:
   - component: {fileID: 1523078560}
   - component: {fileID: 1523078559}
   - component: {fileID: 1523078563}
+  - component: {fileID: 1523078564}
   - component: {fileID: 1523078562}
   - component: {fileID: 1523078561}
-  - component: {fileID: 1523078564}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1459,7 +1459,7 @@ Transform:
   m_GameObject: {fileID: 1523078558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.147147, y: 2.6131215, z: 0}
+  m_LocalPosition: {x: 2.99, y: 3.06, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1486,7 +1486,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 36e6742e9c4b60d4ebdec6cf62f09b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1509,7 +1509,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1518,7 +1518,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0714283
+        value: 0.16071326
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1546,8 +1546,8 @@ LineRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 31997
-      atime1: 62258
+      atime0: 0
+      atime1: 65535
       atime2: 62258
       atime3: 62258
       atime4: 0
@@ -1561,8 +1561,8 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
-    textureScale: {x: 1, y: 1}
+    textureMode: 1
+    textureScale: {x: 2, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0

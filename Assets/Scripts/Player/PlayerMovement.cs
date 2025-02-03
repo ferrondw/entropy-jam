@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using DG.Tweening;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,8 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forceMultiplier;
     [SerializeField] private float velocityThreshold;
     [SerializeField] private TMP_Text shotsText;
-    [Space(20)]
-    [SerializeField] private UnityEvent onPutt;
+    [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
 
     private Vector2 launchVelocity;
@@ -87,7 +87,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        var collisionTransform = other.transform;
+        float distanceY = transform.position.y - collisionTransform.position.y - collisionTransform.lossyScale.y / 2;
+        Debug.Log(distanceY);
+        if (!(distanceY > 0)) return; // on top of platform
+        
         onLand.Invoke();
+        Debug.Log("Landed on top of platform");
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -102,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         bool onWaterCeiling = position.y - otherPosition.y <= -otherHalfHeight && inWater;
 
         if (!onTop && !onWaterCeiling) return;
-        
+
         isTouchingGround = true;
     }
 
@@ -111,12 +117,12 @@ public class PlayerMovement : MonoBehaviour
         if (!other.gameObject.CompareTag("Ground")) return;
         isTouchingGround = false;
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.gameObject.CompareTag("Death")) return;
     }
-    
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (!other.gameObject.CompareTag("Water")) return;
