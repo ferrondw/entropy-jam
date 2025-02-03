@@ -38,6 +38,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _AccentColor: {r: 0.13725491, g: 0.0018454575, b: 0, a: 0}
-    - _MainColor: {r: 0.101960786, g: 0.0042104046, b: 0, a: 0}
+    - _AccentColor: {r: 0.051886797, g: 0.051886797, b: 0.051886797, a: 0}
+    - _MainColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

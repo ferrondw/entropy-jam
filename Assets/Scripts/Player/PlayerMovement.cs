@@ -26,31 +26,30 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         lineRenderer.positionCount = numberOfPoints;
+        Cursor.visible = false;
         shots = 0;
     }
 
     private void Update()
     {
-        float targetSize = 7 + (rigidbody.velocity.magnitude * 0.2f);
+        float targetSize = 7 + rigidbody.velocity.magnitude * 0.2f;
         camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetSize, Time.deltaTime * 2);
 
         canShoot = isTouchingGround && rigidbody.velocity.magnitude < velocityThreshold;
 
-        if (canShoot && Input.touchCount > 0)
+        if (canShoot && Input.GetMouseButton(0))
         {
-            Touch touch = Input.GetTouch(0);
-            Vector3 touchPosition = camera.ScreenToWorldPoint(touch.position);
-            touchPosition.z = 0;
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPosition.z = 0;
 
-            Vector2 force = (transform.position - touchPosition) * forceMultiplier;
+            Vector2 force = (transform.position - worldPosition) * forceMultiplier;
 
             launchVelocity = force / rigidbody.mass;
             DrawArc(launchVelocity);
-
-            if (touch.phase == TouchPhase.Ended)
-            {
-                ShootBall();
-            }
+        }
+        else if (canShoot && Input.GetMouseButtonUp(0))
+        {
+            ShootBall();
         }
         else
         {
