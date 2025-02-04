@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 783528977, guid: eb97d52aede67dc459734fa49a03a2c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb38743d0e6a69b4cbd907f905019fe6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9955,7 +9955,6 @@ MonoBehaviour:
   numberOfPoints: 40
   timeBetweenPoints: 0.04
   forceMultiplier: 3
-  velocityThreshold: 0.1
   shotsText: {fileID: 0}
   stressColor:
     serializedVersion: 2
