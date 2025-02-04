@@ -17,11 +17,9 @@ public class Bumper : MonoBehaviour
         otherRigidbody.AddForce(force, ForceMode2D.Impulse);
         
         onBump.Invoke();
-
-        if (otherRigidbody.GetComponent<PlayerMovement>() != null)
-        {
-            var player = otherRigidbody.GetComponent<PlayerMovement>();
-            player.onBump.Invoke();
-        }
+        if (otherRigidbody.GetComponent<PlayerMovement>() == null) return;
+        
+        var player = otherRigidbody.GetComponent<PlayerMovement>();
+        player.onBump.Invoke();
     }
 }

@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
@@ -17,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int numberOfPoints;
     [SerializeField] private float timeBetweenPoints;
     [SerializeField] private float forceMultiplier;
-    [SerializeField] private float velocityThreshold;
     [SerializeField] private TMP_Text shotsText;
     [SerializeField] private Gradient stressColor;
     [SerializeField] private Rigidbody2D ballBody;
@@ -46,13 +43,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        ballBody.transform.position = transform.position;
-        ballBody.rotation += -rigidbody.velocity.x * Time.deltaTime * 50f;
+        var velocity = rigidbody.velocity;
+        var targetSize = 7 + velocity.magnitude * 0.2f;
         
-        float targetSize = 7 + rigidbody.velocity.magnitude * 0.2f;
+        ballBody.transform.position = transform.position;
+        ballBody.rotation += -velocity.x * Time.deltaTime * 50f;
+        
         camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetSize, Time.deltaTime * 2);
 
-        canShoot = isTouchingGround; // && rigidbody.velocity.magnitude < velocityThreshold;
+        canShoot = isTouchingGround;
         
         if (canShoot && Input.GetMouseButton(0))
         {
@@ -112,11 +111,8 @@ public class PlayerMovement : MonoBehaviour
     {
         var collisionTransform = other.transform;
         float distanceY = transform.position.y - collisionTransform.position.y - collisionTransform.lossyScale.y / 2;
-        Debug.Log(distanceY);
         if (!(distanceY > 0)) return; // on top of platform
-        
         onLand.Invoke();
-        Debug.Log("Landed on top of platform");
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -139,11 +135,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Ground")) return;
         isTouchingGround = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.gameObject.CompareTag("Death")) return;
     }
 
     private void OnTriggerStay2D(Collider2D other)
