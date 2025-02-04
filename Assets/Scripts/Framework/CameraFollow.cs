@@ -1,22 +1,65 @@
+using System.Collections;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float smoothTime;
-    public Transform target;
-    private Camera cam;
-    private Vector3 velocity = Vector3.zero;
+    public static CameraFollow instance;
+    
+    public float SmoothTime;
+    public Transform Target;
+    private Camera _cam;
+    private Vector3 _velocity = Vector3.zero;
+    
+    private Vector3 shakeOffset = Vector3.zero;
+    private float _timeAtCurrentFrame;
+    private float _timeAtLastFrame;
+    private float _fakeDelta;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
-        cam = GetComponent<Camera>();
+        _cam = GetComponent<Camera>();
     }
 
     private void Update()
     {
-        Vector3 point = cam.WorldToViewportPoint(target.position);
-        Vector3 delta = target.position - cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z));
+        _timeAtCurrentFrame = Time.realtimeSinceStartup;
+        _fakeDelta = _timeAtCurrentFrame - _timeAtLastFrame;
+        _timeAtLastFrame = _timeAtCurrentFrame;
+    }
+
+    private void LateUpdate()
+    {
+        if (Target == null) return;
+        
+        Vector3 point = _cam.WorldToViewportPoint(Target.position);
+        Vector3 delta = Target.position - _cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z));
         Vector3 destination = transform.position + delta;
-        transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, destination, ref _velocity, SmoothTime);
+        transform.position += shakeOffset;
+    }
+
+    public static void Shake(float duration, float amount)
+    {
+        instance.StopAllCoroutines();
+        instance.StartCoroutine(instance.cShake(duration, amount));
+    }
+
+    private IEnumerator cShake(float duration, float amount)
+    {
+        float endTime = Time.time + duration;
+
+        while (duration > 0)
+        {
+            shakeOffset = Random.insideUnitSphere * amount;
+            duration -= _fakeDelta;
+            yield return null;
+        }
+
+        shakeOffset = Vector3.zero;
     }
 }

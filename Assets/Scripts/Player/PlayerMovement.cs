@@ -98,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody.velocity = launchVelocity;
         canShoot = false;
+        CameraFollow.Shake(0.2f, 0.3f);
         lineRenderer.enabled = false;
         shots++;
         shotsText.text = $"Shots: {shots}";
