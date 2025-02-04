@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
+    public UnityEvent onBump;
     
     private Vector2 launchVelocity;
     private bool isTouchingGround;
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         float targetSize = 7 + rigidbody.velocity.magnitude * 0.2f;
         camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetSize, Time.deltaTime * 2);
 
-        canShoot = isTouchingGround && rigidbody.velocity.magnitude < velocityThreshold;
+        canShoot = isTouchingGround; // && rigidbody.velocity.magnitude < velocityThreshold;
         
         if (canShoot && Input.GetMouseButton(0))
         {
