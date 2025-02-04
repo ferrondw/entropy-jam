@@ -29,7 +29,7 @@ public class CursorFollow : MonoBehaviour
         if (Input.GetMouseButton(0) && (PlayerMovement.canShoot))
         {
             spriteRenderer.sprite = dragSprite;
-            Vector3 diff = worldPosition - dragTarget.position;
+            Vector2 diff = worldPosition - dragTarget.position;
             var absoluteDiff = diff;
             diff.Normalize();
             float rotZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;

@@ -36,8 +36,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (Target == null) return;
         
-        Vector3 point = _cam.WorldToViewportPoint(Target.position);
-        Vector3 delta = Target.position - _cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z));
+        Vector3 delta = Target.position - _cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10));
         Vector3 destination = transform.position + delta;
         transform.position = Vector3.SmoothDamp(transform.position, destination, ref _velocity, SmoothTime);
         transform.position += shakeOffset;
