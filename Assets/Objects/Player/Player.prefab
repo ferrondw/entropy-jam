@@ -9987,6 +9987,7 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   ballBody: {fileID: 248580053437483311}
+  exitTime: 0.2
   onPutt:
     m_PersistentCalls:
       m_Calls:

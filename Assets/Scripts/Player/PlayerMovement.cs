@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TMP_Text shotsText;
     [SerializeField] private Gradient stressColor;
     [SerializeField] private Rigidbody2D ballBody;
+    [SerializeField] private float exitTime = 0.2f;
 
     [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
@@ -98,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody.velocity = launchVelocity;
         canShoot = false;
+        isTouchingGround = false;
         CameraFollow.Shake(0.2f, 0.3f);
         lineRenderer.enabled = false;
         shots++;
@@ -113,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
         float distanceY = transform.position.y - collisionTransform.position.y - collisionTransform.lossyScale.y / 2;
         if (!(distanceY > 0)) return; // on top of platform
         onLand.Invoke();
+        
+        CancelInvoke(nameof(ExitFloor));
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -127,15 +131,17 @@ public class PlayerMovement : MonoBehaviour
         bool onWaterCeiling = position.y - otherPosition.y <= -otherHalfHeight && inWater;
 
         if (!onTop && !onWaterCeiling) return;
-
+        
         isTouchingGround = true;
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
         if (!other.gameObject.CompareTag("Ground")) return;
-        isTouchingGround = false;
+        Invoke(nameof(ExitFloor), exitTime);
     }
+    
+    private void ExitFloor() { isTouchingGround = false; }
 
     private void OnTriggerStay2D(Collider2D other)
     {
