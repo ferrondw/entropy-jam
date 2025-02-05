@@ -27,14 +27,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 launchVelocity;
     private bool isTouchingGround;
     private bool inWater;
-    private int shots;
 
     private void Start()
     {
         lineRenderer.positionCount = numberOfPoints;
         Cursor.visible = false;
         canShoot = true;
-        shots = 0;
     }
 
     private void OnApplicationFocus(bool hasFocus)
@@ -102,8 +100,8 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = false;
         CameraFollow.Shake(0.2f, 0.3f);
         lineRenderer.enabled = false;
-        shots++;
-        shotsText.text = $"Shots: {shots}";
+        Timer.instance.shotCount++;
+        shotsText.text = $"Shots: {Timer.instance.shotCount}";
         shotsText.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
         shotsText.transform.DOScale(Vector3.one, 0.4f);
         onPutt.Invoke();

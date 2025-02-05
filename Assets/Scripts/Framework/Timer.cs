@@ -4,6 +4,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public static Timer instance;
+    public int shotCount;
 
     private void Awake()
     {
