@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1755710237875088198}
   - component: {fileID: 7055408720687961068}
+  - component: {fileID: 3609752195618000527}
   m_Layer: 0
-  m_Name: WindEffect
+  m_Name: JumpEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +35,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7055408720687961068
 AudioSource:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -128,6 +129,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3609752195618000527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711796227850813932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e33f9d1fc84844d9a5d5b250398ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioProfile: {fileID: 0}
+  hideAudioComponent: 1
+  clips:
+  - {fileID: 8300000, guid: df21ce2b96566e24bad4baa741213de2, type: 3}
+  mute: 0
+  playOnAwake: 0
+  looping: 0
+  priority: 128
+  stereoPan: 0
+  spatialBlend: 0
+  reverbZoneMix: 1
+  ignorePause: 0
+  ignoreListenerVolume: 0
+  basePitch: 0.7
+  randomPitch: 1.3
+  baseVolume: 1
+  randomVolume: 1
 --- !u!1 &1505108845384262339
 GameObject:
   m_ObjectHideFlags: 0
@@ -10131,6 +10161,19 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: player_fly
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3609752195618000527}
+        m_TargetAssemblyTypeName: Advanced_Audio_Sources.scripts.AudioSources.AdvancedAudioSource,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: player_fly
+          m_BoolArgument: 1
         m_CallState: 2
   onLand:
     m_PersistentCalls:
