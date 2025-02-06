@@ -15,11 +15,6 @@ public class GameEnd : MonoBehaviour
         LoadScene();
     }
 
-    public void OpenMenu()
-    {
-        menu.DOFade(1, 0.5f);
-    }
-
     public void LoadScene()
     {
         wiper.In(0, () =>

@@ -26,6 +26,11 @@ public class Timer : MonoBehaviour
         return $"{timePlaying:mm':'ss'.'fff}";
     }
 
+    public float GetTime()
+    {
+        return Time.time - startTime;
+    }
+
     public void ResetTimer()
     {
         startTime = Time.time;
