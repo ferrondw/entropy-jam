@@ -16,12 +16,12 @@ public class HeavenEndSequence : MonoBehaviour, IPointerDownHandler
     public Transition wiper;
     public TMP_Text endText;
 
-    private float time;
+    private string time;
 
     private void Start()
     {
-        time = 0;
-        if(Timer.instance) time = Timer.instance.GetTime();
+        time = "?";
+        if(Timer.instance) time = Timer.instance.TimeString();
         foreach (var text in dialogue)
         {
             text.SetActive(false);
