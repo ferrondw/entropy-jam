@@ -9920,7 +9920,7 @@ GameObject:
   - component: {fileID: 1790584015985633420}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10117,7 +10117,6 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   ballBody: {fileID: 248580053437483311}
   exitTime: 0.2
-  windEffect: {fileID: 7055408720687961068}
   onPutt:
     m_PersistentCalls:
       m_Calls:

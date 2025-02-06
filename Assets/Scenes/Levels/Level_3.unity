@@ -494,7 +494,7 @@ MonoBehaviour:
   spatialBlend: 0
   reverbZoneMix: 1
   pitch: 1
-  volume: 0.5
+  volume: 0.3
   crossFade: 1
   crossFadeTime: 0.6
   ignorePause: 0
