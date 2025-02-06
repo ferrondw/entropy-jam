@@ -435,7 +435,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 64fceec442ada6f4c8ba7c9868d86387, type: 3}
   mute: 0
-  playOnAwake: 1
+  playOnAwake: 0
   looping: 0
   priority: 128
   stereoPan: 0
