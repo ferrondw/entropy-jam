@@ -16,7 +16,7 @@ public class TimerText : MonoBehaviour
 
     private void Update()
     {
-        if (!text) return;
+        if (!text || !Timer.instance) return;
         text.text = Timer.instance.TimeString();
     }
 }

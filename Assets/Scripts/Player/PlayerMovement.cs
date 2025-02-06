@@ -100,8 +100,13 @@ public class PlayerMovement : MonoBehaviour
         isTouchingGround = false;
         CameraFollow.Shake(0.2f, 0.3f);
         lineRenderer.enabled = false;
-        Timer.instance.shotCount++;
-        shotsText.text = $"Shots: {Timer.instance.shotCount}";
+        
+        if (Timer.instance)
+        {
+            Timer.instance.shotCount++;
+            shotsText.text = $"Shots: {Timer.instance.shotCount}";
+        }
+
         shotsText.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
         shotsText.transform.DOScale(Vector3.one, 0.4f);
         onPutt.Invoke();
