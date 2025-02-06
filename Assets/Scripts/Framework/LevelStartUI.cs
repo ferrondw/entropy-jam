@@ -18,7 +18,7 @@ public class LevelStartUI : MonoBehaviour
         canvasGroup.DOFade(1, 0.5f);
         levelStartUI.DOLocalMoveY(0, 0.5f).OnComplete(() =>
         {
-            levelStartUI.DOLocalMoveY(0, 1.5f).OnComplete(() =>
+            levelStartUI.DOLocalMoveY(0, 2.5f).OnComplete(() =>
             {
                 canvasGroup.DOFade(0, 0.5f);
                 levelStartUI.DOLocalMoveY(100, 0.5f);

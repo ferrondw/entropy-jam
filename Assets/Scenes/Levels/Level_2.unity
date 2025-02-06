@@ -486,7 +486,10 @@ PrefabInstance:
       propertyPath: m_text
       value: '- Level 2: Limbo -
 
-        <size=50>Not all light burns</size>'
+        <size=50>One step closer to god.
+
+        To
+        salvation.</size>'
       objectReference: {fileID: 0}
     - target: {fileID: 6740519231055277226, guid: 6c16c0bc1720e444387665ee9b3692f7, type: 3}
       propertyPath: m_Camera
@@ -13901,6 +13904,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f76880be20ba64f9eb6b257e6a1df3, type: 3}
+--- !u!114 &1827783785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1739765864904057402, guid: e6f76880be20ba64f9eb6b257e6a1df3, type: 3}
+  m_PrefabInstance: {fileID: 1827783784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e768f547128aea04396d796efb64d8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1830348672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3474647268332452478, guid: b4168eea045aa9f499fb4d2c78b503d8, type: 3}
@@ -27424,6 +27438,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416459885072904215, guid: e72988a66e13e444d927d849746dd87c, type: 3}
+      propertyPath: wiper
+      value: 
+      objectReference: {fileID: 1827783785}
     - target: {fileID: 8416459885072904215, guid: e72988a66e13e444d927d849746dd87c, type: 3}
       propertyPath: camera
       value: 

@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
+using Yakanashe.Wiper;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Gradient stressColor;
     [SerializeField] private Rigidbody2D ballBody;
     [SerializeField] private float exitTime = 0.2f;
+    [SerializeField] private Transition wiper;
 
     [Space(20)] [SerializeField] private UnityEvent onPutt;
     [SerializeField] private UnityEvent onLand;
@@ -44,6 +47,14 @@ public class PlayerMovement : MonoBehaviour
     {
         var velocity = rigidbody.velocity;
         var targetSize = 7 + velocity.magnitude * 0.2f;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            wiper.In(0, () =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            });
+        }
         
         ballBody.transform.position = transform.position;
         ballBody.rotation += -velocity.x * Time.deltaTime * 50f;
