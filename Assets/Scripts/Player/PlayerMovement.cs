@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         lineRenderer.positionCount = numberOfPoints;
+        shotsText.text = "Shots: " + Timer.instance.shotCount;
         Cursor.visible = false;
         canShoot = true;
     }
@@ -47,13 +48,30 @@ public class PlayerMovement : MonoBehaviour
     {
         var velocity = rigidbody.velocity;
         var targetSize = 7 + velocity.magnitude * 0.2f;
-
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             wiper.In(0, () =>
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             });
+        }
+        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (Cursor.lockState == CursorLockMode.Confined)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+            }
         }
         
         ballBody.transform.position = transform.position;

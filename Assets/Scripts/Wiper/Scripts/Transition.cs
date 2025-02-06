@@ -9,7 +9,7 @@ namespace Yakanashe.Wiper
     {
         public Material TransitionMaterial;
         public TransitionCollection transitionCollection;
-        
+
         [SerializeField, Range(0.1f, 5f)] private float transitionDuration = 0.6f;
 
 
@@ -18,7 +18,7 @@ namespace Yakanashe.Wiper
 
         private static readonly int _progress = Shader.PropertyToID("_Progress");
         private static readonly int _direction = Shader.PropertyToID("_Direction");
-        
+
         private const string DefaultMaterialPath = "Assets/Yakanashe/Wiper/Materials/WiperMaterial.mat";
         private const string DefaultTransitionCollectionPath = "Assets/Yakanashe/Wiper/ScriptableObjects/DefaultTransitionCollection.asset";
 
@@ -37,13 +37,13 @@ namespace Yakanashe.Wiper
         public void In(float delay = 0f, Action onComplete = null, EaseType ease = EaseType.Linear)
         {
             TransitionMaterial.SetFloat(_progress, 1);
-            StartCoroutine(ExecuteTransition(0, delay, onComplete, ease)); 
+            StartCoroutine(ExecuteTransition(0, delay, onComplete, ease));
         }
-        
+
         public void In()
         {
             TransitionMaterial.SetFloat(_progress, 1);
-            StartCoroutine(ExecuteTransition(0, 0, null, EaseType.Linear)); 
+            StartCoroutine(ExecuteTransition(0, 0, null, EaseType.Linear));
         }
 
         private IEnumerator ExecuteTransition(float targetValue, float delay, Action onComplete, EaseType ease)
@@ -82,11 +82,12 @@ namespace Yakanashe.Wiper
 
             onComplete?.Invoke();
         }
-
+#if UNITY_EDITOR
         private void Reset()
         {
             TransitionMaterial = AssetDatabase.LoadAssetAtPath<Material>(DefaultMaterialPath);
             transitionCollection = AssetDatabase.LoadAssetAtPath<TransitionCollection>(DefaultTransitionCollectionPath);
         }
+#endif
     }
 }
