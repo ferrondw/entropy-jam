@@ -11288,6 +11288,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4319877128373438424, guid: 6c16c0bc1720e444387665ee9b3692f7, type: 3}
+      propertyPath: m_text
+      value: '- Level 1: Hell -
+
+        <size=40>The fire of hell does not burn
+        me.
+
+        It fears me.</size>'
+      objectReference: {fileID: 0}
     - target: {fileID: 6740519231055277226, guid: 6c16c0bc1720e444387665ee9b3692f7, type: 3}
       propertyPath: m_Camera
       value: 
@@ -17439,11 +17448,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 50428367266295532, guid: e72988a66e13e444d927d849746dd87c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 87.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50428367266295532, guid: e72988a66e13e444d927d849746dd87c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50428367266295532, guid: e72988a66e13e444d927d849746dd87c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17477,6 +17486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416459885072904215, guid: e72988a66e13e444d927d849746dd87c, type: 3}
+      propertyPath: wiper
+      value: 
+      objectReference: {fileID: 936521000505825455}
     - target: {fileID: 8416459885072904215, guid: e72988a66e13e444d927d849746dd87c, type: 3}
       propertyPath: camera
       value: 
@@ -19898,6 +19911,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f76880be20ba64f9eb6b257e6a1df3, type: 3}
+--- !u!114 &936521000505825455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1739765864904057402, guid: e6f76880be20ba64f9eb6b257e6a1df3, type: 3}
+  m_PrefabInstance: {fileID: 936521000505825454}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e768f547128aea04396d796efb64d8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1671422311064822829
 PrefabInstance:
   m_ObjectHideFlags: 0
